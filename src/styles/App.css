@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#listTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+}

@@ -1,0 +1,16 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 5%;
+}
+
+#title {
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+
+#foodIcon {
+    width: 75px
+}
