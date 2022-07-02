@@ -10,13 +10,13 @@ const initialState = {
     exists: false,
 }
 
+const ingredientListToParams = (ingred) => {
+    let list = (ingred).map(a => a.ingredient.toLowerCase());
+    return list.toString();
+}
+
 export const fetchRecipe = createAsyncThunk('recipes/fetchRecipes', async (obj, { getState }) => {
     const { ingredients } = getState().recipes;
-
-    const ingredientListToParams = (ingred) => {
-        let list = (ingred).map(a => a.ingredient.toLowerCase());
-        return list.toString();
-    }
 
     const response = await recipe.get('', {
         params: {
