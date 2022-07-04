@@ -1,4 +1,43 @@
 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+}
+
+.ingredient {
+    display: flex;
+    text-align: center;
+    width: 175px;
+    border-radius: 20px;
+    list-style: none;
+    padding: 15px 0;
+    overflow: hidden;
     background-color: green;
-    padding: 20px;
+    border: 2px solid mediumaquamarine;
+}
+
+.ingredientText {
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: white;
+}
+
+.delete-btn {
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.x-icon {
+    height: 1.2em;
+}
+
+.delete-btn:hover {
+    background-color: lightblue;
+    color: moccasin;
 }

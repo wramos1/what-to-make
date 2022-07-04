@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { ingredientDeleted } from '../reducers/recipesSlice';
 import '../styles/Ingredient.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Ingredient = ({ item }) => {
     const dispatch = useDispatch();
@@ -12,13 +14,16 @@ const Ingredient = ({ item }) => {
 
     return (
         <div className='item'>
-            <li>
-                {item.ingredient}
+            <div className='ingredient'>
 
-                <button onClick={() => deleteIngredient(item)}>
-                    X
+                <div className='ingredientText'>
+                    {item.ingredient}
+                </div>
+
+                <button onClick={() => deleteIngredient(item)} className='delete-btn'>
+                    <FontAwesomeIcon icon={faXmark} className='x-icon' />
                 </button>
-            </li>
+            </div>
         </div>
     )
 }

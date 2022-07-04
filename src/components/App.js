@@ -24,11 +24,13 @@ const App = () => {
 
                 <IngredientForm />
 
-                <IngredientList />
-
                 <button onClick={getRecipes}>
                     Get Recipes
                 </button>
+
+                <IngredientList />
+
+
             </div>
         </div>
     )

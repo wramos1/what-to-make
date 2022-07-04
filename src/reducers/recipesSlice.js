@@ -23,7 +23,6 @@ export const fetchRecipe = createAsyncThunk('recipes/fetchRecipes', async (obj, 
             ingredients: ingredientListToParams(ingredients)
         }
     });
-
     return response.data
 })
 
