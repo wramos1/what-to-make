@@ -20,7 +20,8 @@ export const fetchRecipe = createAsyncThunk('recipes/fetchRecipes', async (obj, 
 
     const response = await recipe.get('', {
         params: {
-            ingredients: ingredientListToParams(ingredients)
+            ingredients: ingredientListToParams(ingredients),
+            number: 2
         }
     });
     return response.data
