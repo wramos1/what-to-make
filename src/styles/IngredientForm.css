@@ -18,3 +18,16 @@
     padding: 0 30px;
     border-radius: 10px;
 }
+
+#getRecipeBtn {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+#getRecipeBtn button {
+    color: #F4FFF8;
+    background-color: #000F08;
+    padding: 2% 15px;
+    border-radius: 10px;
+}
