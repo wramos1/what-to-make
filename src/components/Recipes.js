@@ -44,7 +44,9 @@ const Recipes = () => {
         if (recipes.length === 0) {
             return (
                 <div>
-                    No Recipes Found
+                    {goBack()}
+
+                    <h1>No Recipes Found</h1>
                 </div>
             )
         }
