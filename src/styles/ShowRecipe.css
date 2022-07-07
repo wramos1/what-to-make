@@ -7,28 +7,78 @@
     top: 0;
     animation: 0.5s ease-in-out popUp 1;
     transform: scale(1);
-    transition: 0.5s ease-in-out all;
 }
 
 #innerModal {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
     border: 1px solid red;
     background-color: blanchedalmond;
     margin: 0 auto;
     width: 75%;
 }
 
+#innerModal h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#recipeImg {
+    display: flex;
+    justify-content: center;
+    margin: 3% auto;
+    border: 5px solid orange;
+    border-radius: 25px;
+    width: 400px;
+}
+
 #closeRecipe {
     position: absolute;
     top: 0;
     right: 0;
+    padding: 0.5% 1.5%;
+    cursor: pointer;
+}
+
+#miniIngredientList {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+}
+
+.miniIngredients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 15%;
+}
+
+.miniIngredients img {
+    width: 120px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid blue;
+    object-fit: scale-down;
+    background-color: lightblue;
+}
+
+#unUsedIngredients {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 @keyframes popUp {
     0% {
-        position: relative;
-        width: 30px;
-        height: 20px;
-        z-index: 15;
-        top: 50%;
+        transform: scale(0);
     }
 }
