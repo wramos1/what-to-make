@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/what-to-make/static/css/main.f46e7d66.css",
+    "main.js": "/what-to-make/static/js/main.50c326d2.js",
+    "static/media/fruits-vegetables.png": "/what-to-make/static/media/fruits-vegetables.7dbcc5396c14d85057d9.png",
+    "static/media/spaghetti.png": "/what-to-make/static/media/spaghetti.78a8d57befb9d5b4f1e3.png",
+    "static/media/bread.png": "/what-to-make/static/media/bread.3bf6e2eb3baab24453c3.png",
+    "static/media/seafood.png": "/what-to-make/static/media/seafood.e0ac2e6363987111385e.png",
+    "static/media/macaroni.png": "/what-to-make/static/media/macaroni.cea9f47e986e471979fc.png",
+    "static/media/bacon.png": "/what-to-make/static/media/bacon.eabcf18c2142d2bb76ff.png",
+    "static/media/lettuce.png": "/what-to-make/static/media/lettuce.ca3c32d328bf92ec6306.png",
+    "static/media/pancakes.png": "/what-to-make/static/media/pancakes.4d30a9ab1798dd962657.png",
+    "static/media/popcorn.png": "/what-to-make/static/media/popcorn.244c76a79e947882cf99.png",
+    "static/media/eggs.png": "/what-to-make/static/media/eggs.d0f535743027428c2dac.png",
+    "static/media/sandwich.png": "/what-to-make/static/media/sandwich.291f31ad0628892755ce.png",
+    "static/media/meat.png": "/what-to-make/static/media/meat.22a803c4d44b921a8176.png",
+    "static/media/cartoon-saladbowl.png": "/what-to-make/static/media/cartoon-saladbowl.1008069796d33c2c18e4.png",
+    "static/media/cartoon-drumstick.webp": "/what-to-make/static/media/cartoon-drumstick.cefce949b9fcdfe85aa1.webp",
+    "index.html": "/what-to-make/index.html",
+    "main.f46e7d66.css.map": "/what-to-make/static/css/main.f46e7d66.css.map",
+    "main.50c326d2.js.map": "/what-to-make/static/js/main.50c326d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f46e7d66.css",
+    "static/js/main.50c326d2.js"
+  ]
+}
