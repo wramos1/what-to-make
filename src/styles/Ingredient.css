@@ -2,42 +2,66 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 150px;
+    width: 20%;
+    height: auto;
 }
 
 .ingredient {
     display: flex;
+    align-items: center;
     text-align: center;
-    width: 175px;
+    width: 100%;
     border-radius: 20px;
     list-style: none;
     padding: 15px 0;
     overflow: hidden;
-    background-color: #4D4847;
-    border: 2px solid #F4FFF8;
+    background-color: rgb(230, 182, 173);
+    color: black;
+    border: 2px solid black;
 }
 
 .ingredientText {
     margin: 0 auto;
-    font-size: 1.1em;
-    color: white;
 }
 
 .delete-btn {
-    margin-left: auto;
     border-radius: 10px;
     padding: 0 15px;
     margin: 0 3px;
     cursor: pointer;
     font-weight: 900;
+    background-color: black;
+    color: pink;
+    border: 2px solid white;
 }
 
-.x-icon {
-    height: 1.2em;
-}
 
 .delete-btn:hover {
-    background-color: lightblue;
-    color: moccasin;
+    background-color: red;
+    color: black;
+    border: 2px solid white;
+}
+
+@media (max-width: 950px) {
+    .ingredientText {
+        font-size: 1.9vmin;
+    }
+}
+
+@media (max-width: 820px) {
+    .ingredientText {
+        font-size: 1.5vmin;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .item {
+        width: 100%;
+        position: relative;
+    }
+
+    .ingredientText {
+        font-size: 1em;
+    }
 }

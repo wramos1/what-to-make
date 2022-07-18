@@ -1,6 +1,15 @@
 body {
     margin: 0;
-    background-color: rgb(118, 152, 176);
+    background-color: white;
+    font-family: 'Noto Serif JP', serif;
+}
+
+input {
+    font-family: 'Noto Serif JP', serif;
+}
+
+button {
+    font-family: 'Noto Serif JP', serif;
 }
 
 *,
@@ -10,7 +19,9 @@ body {
 }
 
 #main {
-    animation: 1 loadIn 2s linear;
+    background-color: white;
+    height: 100vh;
+    animation: 1 loadIn 3.5s linear;
     animation-fill-mode: both;
 }
 
@@ -18,33 +29,79 @@ body {
     display: flex;
     justify-content: center;
     font-size: 2.5em;
-    color: #622dbc;
+    color: black;
 }
 
 #fallenFoodContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     gap: 5%;
     flex-wrap: wrap;
     width: 100%;
     bottom: 0;
     position: fixed;
-    z-index: 999;
-    animation: 1 fallIntoPlace 2s linear;
+    z-index: -1;
+    animation: 1 fallIntoPlace 3.5s linear;
     animation-fill-mode: both;
 }
 
 .falling-food {
     position: relative;
-    animation: 1 spin 2s linear;
+    width: auto;
+    height: fit-content;
+    animation: 1 spin 4s linear;
     animation-fill-mode: both;
+}
+
+.falling-food img {
+    width: 100%;
+    height: 100%;
+}
+
+#multipleFoods {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+.spinner {
+    height: 100vh;
+    opacity: 1;
+    position: relative;
+    transition: opacity linear 0.1s;
+}
+
+.spinner::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px #eee;
+    border-bottom-color: #EF6565;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform;
+}
+
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
 }
 
 @keyframes fallIntoPlace {
     0% {
-        transform: translateY(-550%);
+        transform: translateY(-200%);
         visibility: visible;
         height: 100%;
     }
@@ -63,18 +120,33 @@ body {
     }
 
     100% {
-        transform: rotate(360deg);
-        opacity: 0.9;
+        transform: rotate(720deg);
+        opacity: 0.2;
     }
 }
 
 @keyframes loadIn {
     0% {
-        opacity: 0.2;
+        opacity: 0;
     }
 
     100% {
         opacity: 1;
     }
+}
 
+@media (max-width: 650px) {
+    .falling-food img {
+        width: 6em;
+    }
+}
+
+@media (max-width: 450px) {
+    #listTitle {
+        font-size: 1.9em;
+    }
+
+    .falling-food img {
+        width: 3.5em;
+    }
 }

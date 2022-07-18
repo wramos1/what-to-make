@@ -1,0 +1,242 @@
+#recipeBook {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 15%;
+    height: 100vh;
+}
+
+#leftHalf {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
+    width: 100%;
+}
+
+#overline {
+    border: 1px solid red;
+}
+
+#leftHalf img {
+    margin: 0 5%;
+    height: 20vmax;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+
+#allIngredientContainer {
+    font-size: 1.7vmin;
+}
+
+#allIngredientContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#allIngredientContainer ul li {
+    align-self: flex-start;
+    padding: 0;
+}
+
+#allIngredientContainer h2 {
+    text-decoration: red underline;
+}
+
+#instructionsPage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    height: inherit;
+    width: 100%;
+    border-left: 1px solid red;
+    height: 85%;
+}
+
+#instructionsPage h1 {
+    display: inline-block;
+    border-bottom: 1px solid red;
+}
+
+
+#minorDetails {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2%;
+}
+
+#instructionsListContainer {
+    text-align: left;
+    height: inherit;
+}
+
+#instructionsList {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 0.9vmax;
+    font-size: 1.1em;
+    overflow-y: auto;
+    height: inherit;
+}
+
+#instructionsList h3 {
+    margin: 0;
+    margin-bottom: 1%;
+    font-weight: 900;
+    text-decoration: red underline;
+}
+
+#instructionsList h5 {
+    font-size: 1.2em;
+}
+
+@media (max-width: 1100px) {
+    #recipeBook {
+        margin: auto 5%;
+    }
+
+    #leftHalf img {
+        margin: 0 10%;
+    }
+
+    #instructionsList {
+        font-size: 1.3vmax;
+    }
+
+    #allIngredientContainer {
+        margin: 0 10%;
+    }
+}
+
+@media (max-width: 850px) {
+    #allIngredientContainer {
+        font-size: 1.7vmin;
+    }
+
+    #instructionsList {
+        font-size: 1.7vmax;
+    }
+
+    #leftHalf img {
+        margin: 0 5%;
+    }
+}
+
+@media (max-width: 674px) {
+    #recipeBook {
+        flex-direction: column;
+        margin: 4% auto;
+    }
+
+    #recipeTitle {
+        order: 1;
+        text-align: center;
+        font-size: 5vmin;
+        border-bottom: 1px solid red;
+    }
+
+    #minorDetails {
+        order: 1;
+    }
+
+    #recipeImg {
+        order: 2;
+        margin: 0 5%;
+        height: 100%;
+        width: 75%;
+        border-radius: 10px;
+        border: 1px solid red;
+    }
+
+    #instructionsListContainer {
+        order: 4;
+    }
+
+    #instructionsListContainer h3 {
+        text-align: center;
+        text-decoration: red underline;
+        font-size: 3vmax;
+    }
+
+    #instructionsList {
+        height: 90%;
+        font-size: 2vmax;
+    }
+
+    #allIngredientContainer {
+        order: 3;
+    }
+
+    #allIngredientContainer h2 {
+        text-align: center;
+        font-size: 2.8vmax;
+        text-decoration: 2px solid red underline;
+    }
+
+    #allIngredientContainer ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: 10%;
+        list-style: none;
+        font-size: 1.9vmax;
+        width: 100%;
+        margin: 0;
+        row-gap: 7px;
+    }
+
+    #allIngredientContainer ul li {
+        text-align: center;
+        align-self: center;
+        width: 25%;
+    }
+}
+
+@media (max-width: 620px) {
+    #allIngredientContainer ul li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 550px) {
+    #allIngredientContainer ul {
+        row-gap: 2px;
+    }
+
+    #allIngredientContainer ul li {
+        width: 50%;
+    }
+
+    #allIngredientContainer h2 {
+        font-size: 2.4vmax;
+        text-decoration: red underline;
+    }
+
+    #instructionsListContainer h3 {
+        margin: 2% auto;
+        font-size: 2.6vmax;
+    }
+}
+
+@media (max-width: 500px) {
+    #recipeBook {
+        margin: 7% auto;
+    }
+
+    #recipeTitle {
+        font-size: 5.3vmin;
+    }
+
+    #recipeImg {
+        width: 85%;
+    }
+}

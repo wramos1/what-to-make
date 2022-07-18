@@ -8,3 +8,20 @@
     min-height: 200px;
     margin: 2% auto;
 }
+
+@media (max-width: 650px) {
+    #ingredientContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: auto 5%;
+    }
+}
+
+@media (max-width: 550px) {
+    #ingredientContainer {
+        margin: auto 15%;
+    }
+}

@@ -6,28 +6,82 @@
 
 #form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5%;
 }
 
 #form input {
+    width: 60vw;
     font-size: 1.5em;
+    background-color: rgb(230, 182, 173);
+    border-radius: 5px;
+    color: black;
+    padding: 1%;
+    transition: all 1s;
+}
+
+#form input::placeholder {
+    font-size: 0.8em;
+}
+
+#form input:focus {
+    outline: 1px solid red;
+}
+
+#form button:disabled {
+    filter: brightness(50%);
+    box-shadow: none;
+    border: none;
+    cursor: not-allowed;
+    align-self: center;
 }
 
 #form button {
-    padding: 0 30px;
+    align-self: center;
+    padding: 1.5% 5%;
     border-radius: 10px;
+    background-color: red;
+    color: black;
+    font-weight: 1000;
+    transform: scale(1.1);
+    box-shadow: rgb(255, 0, 0) 0px 0px 30px -1px;
+    border: none;
+    transition: 1s all;
 }
 
 #getRecipeBtn {
     display: flex;
     justify-content: center;
-    margin: 2%;
+    margin: 3vmin 0;
 }
 
 #getRecipeBtn button {
-    color: #F4FFF8;
-    background-color: #000F08;
-    padding: 2% 15px;
+    cursor: pointer;
+    background-color: rgb(212, 15, 15);
+    color: rgb(0, 0, 0);
+    padding: 4% 15px;
     border-radius: 10px;
+    border: 2px solid rgb(200, 180, 180);
+    font-size: 1.1em;
+    font-weight: 500;
+    filter: brightness(90%);
+    transition: 1s all;
+}
+
+#getRecipeBtn button:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+#formMessage {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    margin: 1% auto;
+}
+
+@media (max-width: 600px) {
+    #formMessage {
+        font-size: 0.8em;
+    }
 }
