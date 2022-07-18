@@ -66,10 +66,20 @@ const Main = () => {
         },
     ]
 
-    const cycleFood = fallingImages.map((fallenImg) => {
+    const cycleFood = fallingImages.map((fallenImg) => ({ fallenImg, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ fallenImg }) => {
+            return (
+                <div className='falling-food' key={fallenImg.imgSrc}>
+                    <img src={fallenImg.imgSrc} alt='fallingfood' />
+                </div>
+            )
+        })
+
+    const createMoreCycles = [...Array(10)].map((v, i) => {
         return (
-            <div className='falling-food' key={fallenImg.imgSrc}>
-                <img src={fallenImg.imgSrc} alt='fallingfood' />
+            <div key={i} id='multipleFoods'>
+                {cycleFood}
             </div>
         )
     })
@@ -88,10 +98,9 @@ const Main = () => {
                     <IngredientList />
 
                 </div>
-
-                <div id='fallenFoodContainer'>
-                    {cycleFood}
-                </div>
+            </div>
+            <div id='fallenFoodContainer'>
+                {createMoreCycles}
             </div>
         </div>
     )
