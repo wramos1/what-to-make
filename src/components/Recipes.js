@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import { getAllRecipes } from '../reducers/recipesSlice';
+import { getAllRecipes, getRecipesStatus } from '../reducers/recipesSlice';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Recipe from './Recipe';
-import ShowRecipe from './ShowRecipe';
 import '../styles/Recipes.css'
 
 const Recipes = () => {
-    const [selectedRecipe, setSelectedRecipe] = useState(null);
+    const status = useSelector(getRecipesStatus)
     const recipes = useSelector(getAllRecipes);
     const navigate = useNavigate();
 
     const mapRecipes = recipes.map(rec => {
         return (
             <Recipe
-                onSelect={setSelectedRecipe}
                 key={rec.id}
                 recipe={rec}
             />
@@ -24,36 +24,32 @@ const Recipes = () => {
     const goBack = () => {
         return (
             <button
-                style={{
-                    position: 'fixed',
-                    top: '0',
-                    left: '0',
-                    fontSize: '1.4em',
-                    cursor: 'pointer',
-                    color: 'rgb(31, 199, 177)',
-                    backgroundColor: 'black'
-                }}
+                id='goBackBtn'
                 onClick={() => navigate(-1)}
             >
+                <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
                 Back
             </button>
         );
     };
 
     const renderRecipes = () => {
-        if (recipes.length === 0) {
+        if (recipes.length === 0 && status === 'LOADING') {
+            return <div className="spinner"></div>
+        }
+
+        else if (recipes.length === 0 && status === 'SUCCEEDED') {
             return (
                 <div>
                     {goBack()}
-
-                    <h1>No Recipes Found</h1>
+                    <h1 id='noResults'>No Recipes Found</h1>
                 </div>
             )
         }
 
         return (
             <div>
-                <h1 id='recipeTitle'>
+                <h1 id='recipesTitle'>
                     Recipes
                 </h1>
 
@@ -69,9 +65,6 @@ const Recipes = () => {
 
     return (
         <div>
-            <ShowRecipe
-                recipe={selectedRecipe}
-            />
             {renderRecipes()}
         </div>
     )
