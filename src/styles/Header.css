@@ -11,7 +11,7 @@
     letter-spacing: 5px;
     color: rgb(255, 0, 0);
     margin-bottom: 2%;
-    margin-top: 1%;
+    margin-top: 10%;
 }
 
 #header span {
@@ -34,7 +34,7 @@
 
 @media (max-width: 555px) {
     #title {
-        font-size: 5vmax;
+        font-size: 6vmax;
     }
 }
 
@@ -45,7 +45,6 @@
 
     #title {
         font-size: 4.6vmax;
-        margin: auto 0;
     }
 
     #header span {
@@ -56,12 +55,17 @@
 @media (max-width: 400px) {
     #title {
         font-size: 2.4em;
-        margin: 5% 0;
     }
 }
 
 @media (max-width:370px) {
     #title {
         font-size: 2.2em;
+    }
+}
+
+@media (max-width: 365px) {
+    #title {
+        font-size: 1.9em;
     }
 }
