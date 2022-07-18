@@ -12,14 +12,14 @@ const IngredientForm = () => {
     const dispatch = useDispatch();
 
     const get = () => {
-        dispatch(fetchRecipe())
+        dispatch(fetchRecipe());
     };
 
     const onAddIngredient = (e) => {
         e.preventDefault();
         if (ingredient) {
-            dispatch(ingredientAdded(ingredient))
-            setIngredient('')
+            dispatch(ingredientAdded(ingredient.toLowerCase()));
+            setIngredient('');
         }
     };
 
@@ -40,6 +40,7 @@ const IngredientForm = () => {
                         type="text"
                         value={ingredient}
                         onChange={(e) => setIngredient(e.target.value)}
+                        placeholder='Chicken, Eggs, Apples...'
                     />
                     <button
                         type="submit"
@@ -50,6 +51,8 @@ const IngredientForm = () => {
                     </button>
                 </form>
             </div>
+
+            <span id='formMessage'>Find recipes for what you have at home!</span>
 
             <div id='getRecipeBtn'>
                 <Link to='/recipes'>
