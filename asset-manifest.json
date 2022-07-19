@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/what-to-make/static/css/main.f0cd05b0.css",
+    "main.css": "/what-to-make/static/css/main.12cff0e8.css",
     "main.js": "/what-to-make/static/js/main.50c326d2.js",
     "static/media/fruits-vegetables.png": "/what-to-make/static/media/fruits-vegetables.7dbcc5396c14d85057d9.png",
     "static/media/spaghetti.png": "/what-to-make/static/media/spaghetti.78a8d57befb9d5b4f1e3.png",
@@ -17,11 +17,11 @@
     "static/media/cartoon-saladbowl.png": "/what-to-make/static/media/cartoon-saladbowl.1008069796d33c2c18e4.png",
     "static/media/cartoon-drumstick.webp": "/what-to-make/static/media/cartoon-drumstick.cefce949b9fcdfe85aa1.webp",
     "index.html": "/what-to-make/index.html",
-    "main.f0cd05b0.css.map": "/what-to-make/static/css/main.f0cd05b0.css.map",
+    "main.12cff0e8.css.map": "/what-to-make/static/css/main.12cff0e8.css.map",
     "main.50c326d2.js.map": "/what-to-make/static/js/main.50c326d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0cd05b0.css",
+    "static/css/main.12cff0e8.css",
     "static/js/main.50c326d2.js"
   ]
 }
