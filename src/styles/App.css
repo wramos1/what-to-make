@@ -23,6 +23,7 @@ button {
     height: 100vh;
     animation: 1 loadIn 3.5s linear;
     animation-fill-mode: both;
+    overflow-x: hidden;
 }
 
 #listTitle {

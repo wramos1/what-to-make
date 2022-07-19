@@ -148,7 +148,6 @@
     #recipeImg {
         order: 2;
         margin: 0 5%;
-        height: 100%;
         width: 75%;
         border-radius: 10px;
         border: 1px solid red;
@@ -214,6 +213,7 @@
 
     #allIngredientContainer ul li {
         width: 50%;
+        font-size: 1.1em;
     }
 
     #allIngredientContainer h2 {
@@ -237,6 +237,6 @@
     }
 
     #recipeImg {
-        width: 85%;
+        width: 90%;
     }
 }

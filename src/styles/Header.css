@@ -11,7 +11,7 @@
     letter-spacing: 5px;
     color: rgb(255, 0, 0);
     margin-bottom: 2%;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 
 #header span {
@@ -28,13 +28,19 @@
 
 @media (max-width: 650px) {
     #title {
-        font-size: 7vmax;
+        font-size: 6.5vmax;
     }
 }
 
 @media (max-width: 555px) {
     #title {
-        font-size: 6vmax;
+        font-size: 5.7vmax;
+    }
+}
+
+@media (max-width: 500px) {
+    #title {
+        font-size: 5vmax;
     }
 }
 
